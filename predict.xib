@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PagesViewController" customModule="hw_1" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="predict" customModule="hw_1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年份" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qW7-LJ-Dsx">
+                    <rect key="frame" x="-4.5" y="297.5" width="128" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qW7-LJ-Dsx" secondAttribute="height" multiplier="16:9" id="O9B-cl-TIK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每股收益" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhe-DI-fVf">
+                    <rect key="frame" x="123.5" y="297.5" width="128" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="128" id="Z4l-cI-UdD"/>
+                        <constraint firstAttribute="width" secondItem="Uhe-DI-fVf" secondAttribute="height" multiplier="16:9" id="axg-b3-oIJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成長率" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvX-kU-Mzg">
+                    <rect key="frame" x="251.5" y="297.5" width="128" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="CvX-kU-Mzg" secondAttribute="height" multiplier="16:9" id="mCH-bU-Cp9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Uhe-DI-fVf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3PM-rP-HT9"/>
+                <constraint firstItem="qW7-LJ-Dsx" firstAttribute="width" secondItem="Uhe-DI-fVf" secondAttribute="width" id="7Qb-t5-r9C"/>
+                <constraint firstItem="CvX-kU-Mzg" firstAttribute="width" secondItem="Uhe-DI-fVf" secondAttribute="width" id="RJG-Iy-px5"/>
+                <constraint firstItem="CvX-kU-Mzg" firstAttribute="centerY" secondItem="Uhe-DI-fVf" secondAttribute="centerY" id="Vdi-fO-gn6"/>
+                <constraint firstItem="CvX-kU-Mzg" firstAttribute="leading" secondItem="Uhe-DI-fVf" secondAttribute="trailing" id="ZWu-U8-fAE"/>
+                <constraint firstItem="Uhe-DI-fVf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hwO-xh-cAl"/>
+                <constraint firstItem="qW7-LJ-Dsx" firstAttribute="trailing" secondItem="Uhe-DI-fVf" secondAttribute="leading" id="n7c-2Q-UZO"/>
+                <constraint firstItem="qW7-LJ-Dsx" firstAttribute="centerY" secondItem="Uhe-DI-fVf" secondAttribute="centerY" id="vr1-pA-fMG"/>
+            </constraints>
+            <point key="canvasLocation" x="88.5" y="148.5"/>
+        </view>
+    </objects>
+</document>

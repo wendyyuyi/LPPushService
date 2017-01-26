@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PagesViewController" customModule="hw_1" customModuleProvider="target">
+            <connections>
+                <outlet property="PageContainer" destination="YvS-bc-24T" id="PiU-sV-A3o"/>
+                <outlet property="history_tap" destination="s7y-LL-QEc" id="BPO-dB-vuE"/>
+                <outlet property="predict_tap" destination="g3Z-51-STt" id="hhL-xn-f7F"/>
+                <outlet property="stockhot_tap" destination="KMI-YE-mEi" id="qLn-gP-9uU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVb-Ze-cHV">
+                    <rect key="frame" x="16" y="45" width="331" height="91"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="91" id="Pq5-Al-hRi"/>
+                        <constraint firstAttribute="width" constant="331" id="ajg-15-I62"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3Z-51-STt">
+                    <rect key="frame" x="20" y="57" width="109" height="70"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="109" id="PM0-48-ivy"/>
+                        <constraint firstAttribute="width" secondItem="g3Z-51-STt" secondAttribute="height" multiplier="109:70" id="fF1-0w-4U1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="預測每股收益"/>
+                    <connections>
+                        <action selector="jumptopredict:" destination="-1" eventType="touchUpInside" id="eH8-lz-v0l"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7y-LL-QEc">
+                    <rect key="frame" x="129" y="57" width="109" height="70"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="歷史紀錄"/>
+                    <connections>
+                        <action selector="jumptohistory:" destination="-1" eventType="touchUpInside" id="DUm-CF-aBV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMI-YE-mEi">
+                    <rect key="frame" x="238" y="57" width="109" height="70"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="股霸熱度"/>
+                    <connections>
+                        <action selector="jumptostockhot:" destination="-1" eventType="touchUpInside" id="QiJ-gX-OVF"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YvS-bc-24T" userLabel="page_container">
+                    <rect key="frame" x="20" y="144" width="339" height="495"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="495" id="U7a-5o-0AV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YvS-bc-24T" firstAttribute="top" secondItem="KMI-YE-mEi" secondAttribute="bottom" constant="17" id="2Mp-Eh-RME"/>
+                <constraint firstItem="KMI-YE-mEi" firstAttribute="centerY" secondItem="s7y-LL-QEc" secondAttribute="centerY" id="Eoz-yF-IH4"/>
+                <constraint firstItem="YvS-bc-24T" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="2.5" id="LB6-Wr-SAo"/>
+                <constraint firstItem="g3Z-51-STt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="OBa-qv-Whm"/>
+                <constraint firstItem="KMI-YE-mEi" firstAttribute="width" secondItem="s7y-LL-QEc" secondAttribute="width" id="UBd-MY-u2g"/>
+                <constraint firstItem="s7y-LL-QEc" firstAttribute="centerY" secondItem="g3Z-51-STt" secondAttribute="centerY" id="Up2-5u-xzM"/>
+                <constraint firstItem="YvS-bc-24T" firstAttribute="leading" secondItem="g3Z-51-STt" secondAttribute="leading" id="dYV-fZ-lTo"/>
+                <constraint firstItem="bVb-Ze-cHV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="lbc-JE-4Tx"/>
+                <constraint firstItem="KMI-YE-mEi" firstAttribute="leading" secondItem="s7y-LL-QEc" secondAttribute="trailing" id="oOn-SN-fao"/>
+                <constraint firstItem="s7y-LL-QEc" firstAttribute="width" secondItem="g3Z-51-STt" secondAttribute="width" id="pIE-EN-Rm3"/>
+                <constraint firstItem="s7y-LL-QEc" firstAttribute="leading" secondItem="g3Z-51-STt" secondAttribute="trailing" id="rQI-FP-2Ig"/>
+                <constraint firstItem="bVb-Ze-cHV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="tva-ER-Ac5"/>
+                <constraint firstItem="s7y-LL-QEc" firstAttribute="height" secondItem="g3Z-51-STt" secondAttribute="height" id="wun-gW-YCA"/>
+                <constraint firstItem="KMI-YE-mEi" firstAttribute="height" secondItem="s7y-LL-QEc" secondAttribute="height" id="yqg-Fg-F5n"/>
+                <constraint firstItem="g3Z-51-STt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="57" id="zHm-tE-gDM"/>
+            </constraints>
+            <point key="canvasLocation" x="82.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
